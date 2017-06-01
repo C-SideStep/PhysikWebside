@@ -1,6 +1,9 @@
-﻿var sins = []
+
+var sins = []
 var Ball;
 var P;
+
+
 function setup(){
   createP("Energieerhaltung");
   createCanvas(360 + 40 + 100, 360);
@@ -10,10 +13,12 @@ function setup(){
   for(var i = 0;i<360;i++){
      sins.push(sin(i)*150)
   }
-  Ball = new BallO();
+  Ball = new BallC();
   print(Ball);
  P = createP("Blau => kinetische Energie, Grün => Potentielle Energie");
 }
+
+
 function draw(){
   background(0);
   stroke("red");
@@ -30,7 +35,9 @@ function draw(){
  fill("green");
  rect(400, eKin, 100, ePot);
 }
-function BallO(){
+
+
+function BallC(){
    this.x = 0;
    this.r = 10;
    this.y = 180 -this.r;
@@ -56,3 +63,5 @@ function BallO(){
       ellipse(this.x, this.y, this.r, this.r);
    }	
 }
+
+
